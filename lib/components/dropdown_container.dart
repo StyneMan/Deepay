@@ -1,0 +1,27 @@
+import 'package:deepay/constants.dart';
+import 'package:flutter/material.dart' hide ModalBottomSheetRoute;
+
+class DropdownContainer extends StatelessWidget {
+  final Widget child;
+  const DropdownContainer({
+    Key? key,
+    required this.child,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      margin: const EdgeInsets.only(bottom: 10.0, top: 2.0),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 20,
+      ),
+      width: size.width * 0.8,
+      decoration: BoxDecoration(
+        color: kPrimaryLightColor,
+        borderRadius: BorderRadius.circular(29),
+      ),
+      child: child,
+    );
+  }
+}
